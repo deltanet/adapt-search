@@ -15,6 +15,7 @@ define([
     var isSearchShown = false;
 
     var searchConfigDefault = {
+        _isEnabled: true,
         _previewWords: 15,
         _previewCharacters: 30,
         _showHighlights: true,
@@ -39,7 +40,9 @@ define([
             className: 'search-drawer'
         };
 
-        Adapt.drawer.addItem(drawerObject, 'resources:showSearch');
+        if(searchConfig._isEnabled){
+            Adapt.drawer.addItem(drawerObject, 'resources:showSearch');
+        }
     });
 
     Adapt.on('resources:showSearch', function() {
