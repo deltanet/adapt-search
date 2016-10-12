@@ -1,6 +1,6 @@
 # adapt-search  
 
-**Search** is an *extension* which can extend the [Adapt framework](https://github.com/adaptlearning/adapt_framework). 
+**Search** is an *extension* which can extend the [Adapt framework](https://github.com/adaptlearning/adapt_framework).
 
 <img src="https://raw.githubusercontent.com/wiki/cgkineo/adapt-search/images/example.gif" alt="sample search extension">
 
@@ -16,7 +16,7 @@ It appears in the drawer. Either as a single item or with other items, such as [
 
 ### General Attributes
 
-The attributes listed below are used in *course.json* to configure **Search**, and are properly formatted as JSON in [*example.json*](https://github.com/cgkineo/adapt-search/blob/master/example.json). 
+The attributes listed below are used in *course.json* to configure **Search**, and are properly formatted as JSON in [*example.json*](https://github.com/cgkineo/adapt-search/blob/master/example.json).
 
 
 **title** (string): Extension title, defaults to "Search".
@@ -30,7 +30,7 @@ The attributes listed below are used in *course.json* to configure **Search**, a
 **awaitingResultsMessage**: Message between having enough characters to search and having search results (More than 2 characters per word). Defaults to "Formulating results...".
 
 **_showHighlights** (boolean): Show the yellow highlights on search results.
-  
+
 **_showFoundWords** (boolean): Show found words under the search results.  
 
 **_previewWords** (integer): The number of words taken from either side of the matching word. Defaults to 15.
@@ -41,7 +41,7 @@ The attributes listed below are used in *course.json* to configure **Search**, a
 ### Item Attributes
 
 
-The attributes listed below are used in *contentObject.json*, *articles.json*, *blocks.json* and *components.json* to configure **Search Items**, and are properly formatted as JSON in [*example.json*](https://github.com/cgkineo/adapt-search/blob/master/example.json). 
+The attributes listed below are used in *contentObject.json*, *articles.json*, *blocks.json* and *components.json* to configure **Search Items**, and are properly formatted as JSON in [*example.json*](https://github.com/cgkineo/adapt-search/blob/master/example.json).
 
 **_search** (object): Object to designate search settings.  
 
@@ -55,7 +55,7 @@ No known limitations.
 
 
 ----------------------------
-**Version number:**  2.0.1   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
+**Version number:**  2.0.2   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
 **Framework versions:** ^2.0.0  
 **Author / maintainer:** Kineo and community with [contributors](https://github.com/cgkineo/adapt-search/graphs/contributors)   
 **Accessibility support:** WAI AA   
