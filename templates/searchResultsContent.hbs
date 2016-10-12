@@ -8,7 +8,7 @@
     </div>
 {{else}}
     {{#each formattedResults}}
-        <button class="base search-result" data-id="{{id}}" aria-label="{{{searchTitle}}}. {{{textPreview}}}">
+        <button class="search-result" data-id="{{id}}" aria-label="{{{searchTitle}}}. {{{textPreview}}}">
             <div class="search-result-inner">
                 <div class="result-title">{{#if ../../_showHighlights}}{{{searchTitleTagged}}}{{else}}{{{searchTitle}}}{{/if}}</div>
                 {{#if textPreview}}

@@ -67,7 +67,7 @@ define([
         var searchConfig = Adapt.course.get('_search');
         searchConfig = new Backbone.Model(searchConfig);
 
-        var $searchDrawerButton = $(".search-drawer");
+        var $searchDrawerButton = $(".search-item-open");
 
         if ($searchDrawerButton.is(":not(div)")) {
             var $replacementButton = $("<div></div>");
@@ -76,9 +76,9 @@ define([
             $searchDrawerButton.replaceWith($replacementButton);
         }
 
-        $('.drawer-inner .search-drawer').append(new SearchDrawerItemView({model:searchConfig, query: lastSearchQuery}).el);
-        $('.drawer-inner .search-drawer').append(new SearchResultsView({model:searchConfig, searchObject: lastSearchObject}).el);
-        
+        $('.drawer-inner .search-item-open').append(new SearchDrawerItemView({model:searchConfig, query: lastSearchQuery}).el);
+        $('.drawer-inner .search-item-open').append(new SearchResultsView({model:searchConfig, searchObject: lastSearchObject}).el);
+
     });
 
     Adapt.on('drawer:closed', function() {
