@@ -15,6 +15,7 @@ define([
     var isSearchShown = false;
 
     var searchConfigDefault = {
+        _isEnabled: true,
         _previewWords: 15,
         _previewCharacters: 30,
         _showHighlights: true,
@@ -39,7 +40,9 @@ define([
             className: 'search-drawer'
         };
 
-        Adapt.drawer.addItem(drawerObject, 'resources:showSearch');
+        if(searchConfig._isEnabled){
+            Adapt.drawer.addItem(drawerObject, 'resources:showSearch');
+        }
     });
 
     Adapt.on('resources:showSearch', function() {
@@ -64,7 +67,7 @@ define([
         var searchConfig = Adapt.course.get('_search');
         searchConfig = new Backbone.Model(searchConfig);
 
-        var $searchDrawerButton = $(".search-drawer");
+        var $searchDrawerButton = $(".search-item-open");
 
         if ($searchDrawerButton.is(":not(div)")) {
             var $replacementButton = $("<div></div>");
@@ -80,7 +83,7 @@ define([
 
         $('.drawer-inner .search-drawer').append(new SearchDrawerItemView({model:searchConfig, query: lastSearchQuery}).el);
         $('.drawer-inner .search-drawer').append(new SearchResultsView({model:searchConfig, searchObject: lastSearchObject}).el);
-        
+
     });
 
     Adapt.on('drawer:closed', function() {

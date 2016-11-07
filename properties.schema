@@ -159,7 +159,7 @@
 										"options": [true, false]
 									},
 									"validators": [],
-									"help": ""
+									"help": "Turns Search on and off. Acceptable values are true and false."
 								},
 								"_previewWords": {
 									"type": "number",
@@ -229,7 +229,7 @@
 									"inputType": "Number",
 									"validators": ["number"],
 									"help": "Extra points for a repeat match"
-								},                
+								},
 								"title": {
 									"type": "string",
 									"default": "Search",
@@ -272,7 +272,7 @@
 								}
 							}
 						}
-					}	
+					}
 				}
 			}
 		}
