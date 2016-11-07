@@ -1,6 +1,7 @@
 // on each searchable contentObject, article, block or component
 {
     "_search": {
+        "_isEnabled": true,
         "keywords": [
             "sentences which can be used",
             "to better enhance the component descriptions",
@@ -96,8 +97,6 @@
         "from","has","he","in","is","it","its","of","on",
         "that","the","to","was","were","will","wish","",
     ],
-
-    "_wordBoundaryCharacters": [ " ", ".", ":" ],
 
     "_scoreQualificationThreshold": 20,
     "_minimumWordLength": 2,
