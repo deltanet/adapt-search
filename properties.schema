@@ -22,11 +22,8 @@
 									"type": "boolean",
 									"required": true,
 									"default": true,
-									"title": "Enable search",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
 									"validators": [],
 									"help": ""
 								},
@@ -55,11 +52,8 @@
 									"type": "boolean",
 									"required": true,
 									"default": true,
-									"title": "Enable search",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
 									"validators": [],
 									"help": ""
 								},
@@ -88,11 +82,8 @@
 									"type": "boolean",
 									"required": true,
 									"default": true,
-									"title": "Enable search",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
 									"validators": [],
 									"help": ""
 								},
@@ -121,11 +112,8 @@
 									"type": "boolean",
 									"required": true,
 									"default": true,
-									"title": "Enable search",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
 									"validators": [],
 									"help": ""
 								},
@@ -157,13 +145,10 @@
 									"type": "boolean",
 									"required": true,
 									"default": true,
-									"title": "Enable search",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
 									"validators": [],
-									"help": "Turns Search on and off. Acceptable values are true and false."
+									"help": "Controls whether the Search extension is enabled or disabled."
 								},
 								"_previewWords": {
 									"type": "number",
@@ -188,10 +173,7 @@
 									"required": true,
 									"default": true,
 									"title": "Show found words",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"inputType": "Checkbox",
 									"validators": [],
 									"help": ""
 								},
@@ -200,10 +182,7 @@
 									"required": true,
 									"default": true,
 									"title": "Show highlights",
-									"inputType": {
-										"type": "Boolean",
-										"options": [true, false]
-									},
+									"inputType": "Checkbox",
 									"validators": [],
 									"help": ""
 								},
