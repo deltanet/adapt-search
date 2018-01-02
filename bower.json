@@ -2,7 +2,7 @@
     "name": "adapt-search",
     "repository": "git://github.com/deltanet/adapt-search",
     "framework": ">=2.0.0",
-    "version": "2.0.6",
+    "version": "2.0.7",
     "homepage": "https://github.com/deltanet/adapt-search",
     "issues": "https://github.com/deltanet/adapt-search/issues/",
     "displayName": "Search",
