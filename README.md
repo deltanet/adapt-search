@@ -18,6 +18,9 @@ It appears in the drawer. Either as a single item or with other items, such as [
 
 The attributes listed below are used in *course.json* to configure **Search**, and are properly formatted as JSON in [*example.json*](https://github.com/cgkineo/adapt-search/blob/master/example.json).
 
+**_isEnabled** (boolean):  Turns on and off the **Search** extension. Can be set to disable **Search** when not required.  
+
+**_drawerOrder** (number): Determines the order in which this extension appears as a drawer item. Acceptable values are numbers.  
 
 **title** (string): Extension title, defaults to "Search".
 

@@ -150,6 +150,60 @@
 									"validators": [],
 									"help": "Controls whether the Search extension is enabled or disabled."
 								},
+								"_drawerOrder": {
+									"type": "number",
+									"required": false,
+									"title": "Drawer order",
+									"inputType": "Number",
+									"default": 0,
+									"validators": ["number"],
+									"help": "The order in which this extension should appear as a drawer item."
+								},
+								"title": {
+									"type": "string",
+									"default": "Search",
+									"required": false,
+									"title": "Title",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								},
+								"description": {
+									"type": "string",
+									"default": "Enter search criteria",
+									"required": false,
+									"title": "Placeholder",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								},
+								"placeholder": {
+									"type": "string",
+									"default": "",
+									"required": false,
+									"title": "Placeholder text for the search box",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								},
+								"noResultsMessage": {
+									"type": "string",
+									"default": "No results found",
+									"required": false,
+									"title": "No results message",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								},
+								"awaitingResultsMessage": {
+									"type": "string",
+									"default": "Formulating results...",
+									"required": false,
+									"title": "Processing results message",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								},
 								"_previewWords": {
 									"type": "number",
 									"required": false,
@@ -213,51 +267,6 @@
 									"inputType": "Number",
 									"validators": ["number"],
 									"help": "Extra points for a repeat match"
-								},
-								"title": {
-									"type": "string",
-									"default": "Search",
-									"required": false,
-									"title": "Title",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								},
-								"description": {
-									"type": "string",
-									"default": "Enter search criteria",
-									"required": false,
-									"title": "Placeholder",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								},
-								"placeholder": {
-									"type": "string",
-									"default": "",
-									"required": false,
-									"title": "Placeholder text for the search box",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								},
-								"noResultsMessage": {
-									"type": "string",
-									"default": "No results found",
-									"required": false,
-									"title": "No results message",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								},
-								"awaitingResultsMessage": {
-									"type": "string",
-									"default": "Formulating results...",
-									"required": false,
-									"title": "Processing results message",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
 								}
 							}
 						}

@@ -37,7 +37,8 @@ define([
         var drawerObject = {
             title: searchConfig.title,
             description: searchConfig.description,
-            className: 'search-drawer'
+            className: 'search-drawer',
+            drawerOrder: searchConfig._drawerOrder || 0
         };
 
         if(searchConfig._isEnabled){
