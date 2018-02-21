@@ -68,7 +68,7 @@ define([
         var searchConfig = Adapt.course.get('_search');
         searchConfig = new Backbone.Model(searchConfig);
 
-        var $searchDrawerButton = $(".search-item-open");
+        var $searchDrawerButton = $(".search-drawer");
 
         if ($searchDrawerButton.is(":not(div)")) {
             var $replacementButton = $("<div></div>");
