@@ -1,32 +1,32 @@
-define(function(require){
-    var Backbone = require('backbone');
-    var Adapt = require('coreJS/adapt');
-    var SearchAlgorithm = require('./search-algorithm');
+define([
+    'core/js/adapt',
+    './search-algorithm'
+], function(Adapt, SearchAlgorithm){
 
     var replaceTagsRegEx = /\<{1}[^\>]+\>/g;
     var replaceEndTagsRegEx = /\<{1}\/{1}[^\>]+\>/g;
-    	
-	var SearchResultsView = Backbone.View.extend({
+
+	  var SearchResultsView = Backbone.View.extend({
 
         className : 'search-results inactive',
-        
+
         initialize: function(options) {
 
-          this.listenTo(Adapt, 'drawer:empty', this.remove);    
-          this.listenTo(Adapt, 'search:termsFiltered', _.bind(this.updateResults, this));      
-          this.render();  
+          this.listenTo(Adapt, 'drawer:empty', this.remove);
+          this.listenTo(Adapt, 'search:termsFiltered', _.bind(this.updateResults, this));
+          this.render();
 
           if(options.searchObject){
             this.updateResults(options.searchObject);
-          }          
-        },        
+          }
+        },
 
         events: {
           "click [data-id]":"navigateToResultPage"
         },
 
         render: function() {
-            
+
             var template = Handlebars.templates['searchResults'];
             $(this.el).html(template());
 
@@ -34,7 +34,7 @@ define(function(require){
         },
 
 
-        updateResults : function(searchObject){            
+        updateResults : function(searchObject){
 
             this.$el.removeClass('inactive');
             var formattedResults = this.formatResults(searchObject);
@@ -43,7 +43,7 @@ define(function(require){
 
         formatResults : function(searchObject){
 
-            var resultsLimit = Math.min(5, searchObject.searchResults.length);            
+            var resultsLimit = Math.min(5, searchObject.searchResults.length);
             var formattedResults = [];
 
             for(var i=0;i<resultsLimit;i++){
@@ -51,7 +51,7 @@ define(function(require){
             }
 
             searchObject.formattedResults = formattedResults;
-            
+
             return searchObject;
         },
 
@@ -75,7 +75,7 @@ define(function(require){
             title = this.stripTags(title);
             displayTitle = this.stripTags(displayTitle);
             body = this.stripTags(body);
-            
+
             var searchTitle = "";
             var textPreview = "";
 
@@ -102,7 +102,7 @@ define(function(require){
                     phrase = this.stripTags(phrase);
                     lowerPhrase = phrase.toLowerCase();
                 }
-                
+
                 if (lowerPhrase == lowerSearchTitle) {
                     //if the search phrase and title are the same
                     var finder = new RegExp("(([^"+wordCharacters+"]*["+wordCharacters+"]{1}){1,"+previewWords+"}|.{0,"+previewCharacters+"})", "i");
@@ -122,7 +122,7 @@ define(function(require){
                         wordIndex++;
                         if (wordIndex == wordMap.length) throw "search: cannot find word in phrase";
                         wordInPhraseStartPosition = lowerPhrase.indexOf(wordMap[wordIndex].word);
-                    } 
+                    }
                     var regex = new RegExp("(([^"+wordCharacters+"]*["+wordCharacters+"]{1}){1,"+previewWords+"}|.{0,"+previewCharacters+"})"+SearchAlgorithm._regularExpressions.escapeRegExp(wordMap[wordIndex].word)+"((["+wordCharacters+"]{1}[^"+wordCharacters+"]*){1,"+previewWords+"}|.{0,"+previewCharacters+"})", "i");
                     var snippet = phrase.match(regex)[0];
                     var snippetIndexInPhrase = phrase.indexOf(snippet);
@@ -136,7 +136,7 @@ define(function(require){
                         textPreview = "..." + snippet + "...";
                     }
                 }
-            
+
             } else {
 
                 var finder = new RegExp("(([^"+wordCharacters+"]*["+wordCharacters+"]{1}){1,"+previewWords+"}|.{0,"+previewCharacters+"})", "i");
@@ -188,8 +188,8 @@ define(function(require){
 
         navigateToResultPage: function(event) {
             event.preventDefault();
-            var blockID = $(event.currentTarget).attr("data-id");            
-            
+            var blockID = $(event.currentTarget).attr("data-id");
+
             Adapt.navigateToElement("." + blockID);
             Adapt.trigger('drawer:closeDrawer');
         }

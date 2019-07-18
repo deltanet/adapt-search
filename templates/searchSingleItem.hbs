@@ -1,11 +1,13 @@
-<div class="search-drawer" role="complementary">
+{{! make the _globals object in course.json available to this template}}
+{{import_globals}}
+<div class="search-drawer">
   <div class="search-item drawer-item">
-    <div role="listitem" class="search-item-open drawer-item-open" tabindex="0">
+    <div role="listitem" class="search-item-open drawer-item-open">
     	<div class="drawer-item-title">
     		<div class="drawer-item-title-inner h5">{{{title}}}</div>
     	</div>
     	<div class="drawer-item-description">
-    		<div class="drawer-item-description-inner">{{{a11y_text description}}}</div>
+    		<div class="drawer-item-description-inner">{{{description}}}</div>
     	</div>
     </div>
   </div>

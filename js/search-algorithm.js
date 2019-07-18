@@ -5,13 +5,13 @@
 */
 
 define([
-    "coreJS/adapt",
-    "coreModels/adaptModel"
+    "core/js/adapt",
+    "core/js/models/adaptModel"
 ], function (Adapt, AdaptModel) {
 
-    if (!AdaptModel.prototype.getParents) {
+    if (!AdaptModel.prototype.getAncestorModels) {
 
-        AdaptModel.prototype.getParents = function (shouldIncludeChild) {
+        AdaptModel.prototype.getAncestorModels = function (shouldIncludeChild) {
             var parents = [];
             var context = this;
 
@@ -640,7 +640,7 @@ define([
             }
 
             function isModelSearchable(model) {
-                var trail = model.getParents(true);
+                var trail = model.getAncestorModels(true);
                 var config = model.get("_search");
                 if (config && config._isEnabled === false) return false;
 
@@ -931,7 +931,7 @@ define([
             }
 
             function isModelSearchable(model) {
-                var trail = model.getParents(true);
+                var trail = model.getAncestorModels(true);
                 var config = model.get("_search");
                 if (config && config._isEnabled === false) return false;
                 if (model.get("_isLocked")) return false;
@@ -981,6 +981,5 @@ define([
     window.search = search;
 
     return search;
-
 
 });
