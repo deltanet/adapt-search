@@ -10,126 +10,6 @@
 			"type": "object",
 			"required": true,
 			"properties": {
-				"contentobject": {
-					"type": "object",
-					"properties": {
-						"_search": {
-							"type": "object",
-							"required": false,
-							"legend": "Search",
-							"properties": {
-								"_isEnabled": {
-									"type": "boolean",
-									"required": true,
-									"default": true,
-									"title": "Is Enabled",
-									"inputType": "Checkbox",
-									"validators": [],
-									"help": ""
-								},
-								"keywords": {
-									"type": "string",
-									"default": "",
-									"required": false,
-									"title": "Keywords",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								}
-							}
-						}
-					}
-				},
-				"article": {
-					"type": "object",
-					"properties": {
-						"_search": {
-							"type": "object",
-							"required": false,
-							"legend": "Search",
-							"properties": {
-								"_isEnabled": {
-									"type": "boolean",
-									"required": true,
-									"default": true,
-									"title": "Is Enabled",
-									"inputType": "Checkbox",
-									"validators": [],
-									"help": ""
-								},
-								"keywords": {
-									"type": "string",
-									"default": "",
-									"required": false,
-									"title": "Keywords",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								}
-							}
-						}
-					}
-				},
-				"block": {
-					"type": "object",
-					"properties": {
-						"_search": {
-							"type": "object",
-							"required": false,
-							"legend": "Search",
-							"properties": {
-								"_isEnabled": {
-									"type": "boolean",
-									"required": true,
-									"default": true,
-									"title": "Is Enabled",
-									"inputType": "Checkbox",
-									"validators": [],
-									"help": ""
-								},
-								"keywords": {
-									"type": "string",
-									"default": "",
-									"required": false,
-									"title": "Keywords",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								}
-							}
-						}
-					}
-				},
-				"component": {
-					"type": "object",
-					"properties": {
-						"_search": {
-							"type": "object",
-							"required": false,
-							"legend": "Search",
-							"properties": {
-								"_isEnabled": {
-									"type": "boolean",
-									"required": true,
-									"default": true,
-									"title": "Is Enabled",
-									"inputType": "Checkbox",
-									"validators": [],
-									"help": ""
-								},
-								"keywords": {
-									"type": "string",
-									"default": "",
-									"required": false,
-									"title": "Keywords",
-									"inputType": "Text",
-									"validators": [],
-									"translatable": true
-								}
-							}
-						}
-					}
-				},
 				"config": {
 					"type": "object"
 				},
@@ -271,7 +151,127 @@
 							}
 						}
 					}
-				}
+				},
+				"contentobject": {
+					"type": "object",
+					"properties": {
+						"_search": {
+							"type": "object",
+							"required": false,
+							"legend": "Search",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": true,
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": ""
+								},
+								"keywords": {
+									"type": "string",
+									"default": "",
+									"required": false,
+									"title": "Keywords",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								}
+							}
+						}
+					}
+				},
+				"article": {
+					"type": "object",
+					"properties": {
+						"_search": {
+							"type": "object",
+							"required": false,
+							"legend": "Search",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": true,
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": ""
+								},
+								"keywords": {
+									"type": "string",
+									"default": "",
+									"required": false,
+									"title": "Keywords",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								}
+							}
+						}
+					}
+				},
+				"block": {
+					"type": "object",
+					"properties": {
+						"_search": {
+							"type": "object",
+							"required": false,
+							"legend": "Search",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": true,
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": ""
+								},
+								"keywords": {
+									"type": "string",
+									"default": "",
+									"required": false,
+									"title": "Keywords",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								}
+							}
+						}
+					}
+				},
+				"component": {
+					"type": "object",
+					"properties": {
+						"_search": {
+							"type": "object",
+							"required": false,
+							"legend": "Search",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": true,
+									"default": true,
+									"title": "Is Enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": ""
+								},
+								"keywords": {
+									"type": "string",
+									"default": "",
+									"required": false,
+									"title": "Keywords",
+									"inputType": "Text",
+									"validators": [],
+									"translatable": true
+								}
+							}
+						}
+					}
+				}				
 			}
 		}
 	}

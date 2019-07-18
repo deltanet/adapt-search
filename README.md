@@ -28,6 +28,8 @@ The attributes listed below are used in *course.json* to configure **Search**, a
 
 **description** (string): Extension description, defaults to "Type in search words".
 
+**_drawerOrder** (number): Determines the order in which this extension appears as a drawer item. Acceptable values are numbers.
+
 **noResultsMessage**: Text displayed when no results are found, defaults to "Sorry, no results were found".
 
 **awaitingResultsMessage**: Message between having enough characters to search and having search results (More than 2 characters per word). Defaults to "Formulating results...".
@@ -48,7 +50,8 @@ The attributes listed below are used in *contentObject.json*, *articles.json*, *
 
 **_search** (object): Object to designate search settings.  
 
->**keywords** array(string): An array of strings detailing the important search phrases for the course section.
+>**keywords** array(string): An array of strings detailing the important search phrases for the course section.  
+**NOTE**: Keywords are exported with the `grunt translate:export` command. When localising content, use a process that ensures translated keywords are found in the actual translated course content.
 
 <div float align=right><a href="#top">Back to Top</a></div>
 
