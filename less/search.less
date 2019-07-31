@@ -1,4 +1,17 @@
 .search-drawer {
+  &.drawer-item-open {
+    width: auto !important;
+
+    &:hover {
+      background-color: @drawer-item-color !important;
+    }
+
+    .drawer-item-search {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
   .drawer-item-open {
     width: auto !important;
 
@@ -7,17 +20,16 @@
     }
   }
 
+  .drawer-item-search {
+    padding: @drawer-item-padding;
+  }
+
   .list-item-open.search {
   	position: relative;
   	padding: @drawer-item-padding;
     display: block;
     width: 100%;
     color: @drawer-item-text-color;
-  }
-
-  .drawer-item-search {
-    padding: @drawer-item-padding;
-    padding-top: 0;
   }
 
   .list-item.search {
@@ -81,6 +93,10 @@
       	color: @drawer-item-text-color-hover;
       	background-color: @drawer-item-color-hover;
     	}
+
+      .result-title {
+        margin-bottom: @drawer-item-padding-bottom;
+      }
 
     	.search-result-inner {
     		padding: @drawer-item-padding;
