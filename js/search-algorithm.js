@@ -9,9 +9,9 @@ define([
     "core/js/models/adaptModel"
 ], function (Adapt, AdaptModel) {
 
-    if (!AdaptModel.prototype.getAncestorModels) {
+    if (!AdaptModel.prototype.getParents) {
 
-        AdaptModel.prototype.getAncestorModels = function (shouldIncludeChild) {
+        AdaptModel.prototype.getParents = function (shouldIncludeChild) {
             var parents = [];
             var context = this;
 
@@ -640,7 +640,7 @@ define([
             }
 
             function isModelSearchable(model) {
-                var trail = model.getAncestorModels(true);
+                var trail = model.getParents(true);
                 var config = model.get("_search");
                 if (config && config._isEnabled === false) return false;
 
@@ -931,7 +931,7 @@ define([
             }
 
             function isModelSearchable(model) {
-                var trail = model.getAncestorModels(true);
+                var trail = model.getParents(true);
                 var config = model.get("_search");
                 if (config && config._isEnabled === false) return false;
                 if (model.get("_isLocked")) return false;
