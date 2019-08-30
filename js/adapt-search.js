@@ -4,7 +4,7 @@
 * Maintainers - Gavin McMaster <gavin.mcmaster@kineo.com>
 */
 define([
-    'coreJS/adapt',
+    'core/js/adapt',
     './searchDrawerItemView',
     './searchResultsView',
     './search-algorithm'

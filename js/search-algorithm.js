@@ -5,8 +5,8 @@
 */
 
 define([
-    "coreJS/adapt",
-    "coreModels/adaptModel"
+    "core/js/adapt",
+    "core/js/models/adaptModel"
 ], function (Adapt, AdaptModel) {
 
     if (!AdaptModel.prototype.getParents) {
@@ -981,6 +981,5 @@ define([
     window.search = search;
 
     return search;
-
 
 });

@@ -1,117 +1,116 @@
 .search-drawer {
+  &.drawer-item-open {
+    width: auto !important;
 
-    .list-item-open.search {
-    	position: relative;
-    	padding: @drawer-item-padding;
-    	display: block;
-    	width: 100%;
+    &:hover {
+      background-color: @drawer-item-color !important;
+    }
+
+    .drawer-item-search {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  .drawer-item-open {
+    width: auto !important;
+
+    &:hover {
+      background-color: @drawer-item-color !important;
+    }
+  }
+
+  .drawer-item-search {
+    padding: @drawer-item-padding;
+  }
+
+  .list-item-open.search {
+  	position: relative;
+  	padding: @drawer-item-padding;
+    display: block;
+    width: 100%;
+    color: @drawer-item-text-color;
+  }
+
+  .list-item.search {
+    position: relative;
+  }
+
+  // Search Box
+  .search-box {
+    height: 24px;
+  	border: none;
+    width: 100%;
+  	display: block;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .start-search {
+  	text-decoration: none;
+  	top: 50%;
+  	right: 0;
+    margin-top: -12px;
+    position: absolute;
+    color: @drawer-icon-color;
+    &:hover {
+      color: @drawer-icon-color-hover;
+    }
+  }
+
+  // Search Result
+  .search-results {
+  	&.inactive {
+    	display: none;
+    }
+
+    .no-results {
+    	padding: 0px;
     	color: @drawer-item-text-color;
+    	width: 100%;
+    	font-size: @body-text-font-size;
+    	.search-result-inner {
+        padding: 10px 5px;;
+    	}
+    	div {
+    		padding: 0px;
+    	}
     }
 
-    .drawer-item-description-inner {
-        //font-size:16px;
-        //font-weight:@font-weight-bold;
-    }
+    .search-result {
+    	padding: 0px;
+      margin-bottom: 2px;
+    	color: @drawer-item-text-color;
+      text-align: left;
+      .dir-rtl & {
+        text-align: right;
+      }
+    	width: 100%;
 
-    .list-item.search {
-    	padding: 5px 0;
-    	padding-left: 0;
-    	position: relative;
-    }
+    	.no-touch &:hover {
+      	color: @drawer-item-text-color-hover;
+      	background-color: @drawer-item-color-hover;
+    	}
 
-    // Search Box
-    .search-box {
-      height: 24px;
-    	border: none;
-      width: 100%;
-    	display: block;
+      .result-title {
+        margin-bottom: @drawer-item-padding-bottom;
+      }
 
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
+    	.search-result-inner {
+    		padding: @drawer-item-padding;
+    	}
 
-    .start-search {
-    	text-decoration: none;
-    	top: 50%;
-    	right: 0;
-    	margin-top: -12px;
-    	position: absolute;
-    	color: @drawer-icon-color;
-    	&:hover {
-        color: @drawer-icon-color-hover;
+    	.found {
+    		background-color: yellow;
+    		color: black;
+    	}
+
+      .result-preview {
+        font-size: @body-text-font-size;
+        line-height: @body-text-line-height;
       }
     }
-
-    .search-item-open {
-      background-color: @primary-color;
-    	&:hover {
-    	   background-color: @primary-color;
-    	}
-    }
-
-    // Search Result
-    .search-results {
-      margin-top: 7px;
-    	&.inactive {
-    		display:none;
-    	}
-
-    	.no-results {
-    		padding: 0px;
-    		color: @drawer-item-text-color;
-    	  width: 100%;
-    	  font-size: @body-text-font-size;
-    	  .search-result-inner {
-    			padding: 10px 5px;;
-    		}
-    		div {
-    			padding: 0px;
-    		}
-    	}
-
-    	.search-result {
-    		padding:0px;
-        margin-bottom: 2px;
-    		color: @drawer-item-text-color;
-        text-align: left;
-        .dir-rtl & {
-          text-align: right;
-        }
-    	   width: 100%;
-    	   .no-touch &:hover {
-      		color: @drawer-item-text-color-hover;
-      		background-color: @drawer-item-color-hover;
-    		}
-    		.search-result-inner {
-    			padding: 10px 5px;
-    		}
-    		.found {
-    			background-color: yellow;
-    			color: black;
-    		}
-    	}
-    }
-
-    .result-title {
-      .sub-title;
-      color: @drawer-item-text-color;
-      text-decoration: none;
-      padding: 0 0 0 5px;
-    }
-
-    .result-foundwords {
-    	font-size: @body-text-font-size;
-      color: @drawer-item-text-color;
-      text-decoration: none;
-      padding: 0 0 0 10px;
-    }
-
-    .result-preview {
-    	font-weight: @font-weight-regular;
-      color: @drawer-item-text-color;
-      text-decoration: none;
-    	padding: 5px 0 4px 10px;
-    }
-
+  }
 }
